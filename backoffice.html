@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDazon - Back-Office</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Back-Office</h1>
+      <form id="product-form" class="mb-3">
+        <div class="form-group">
+          <label for="name">Nome Prodotto:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="description">Descrizione:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            name="description"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Prezzo:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            name="price"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="brand">Marca:</label>
+          <input type="text" class="form-control" id="brand" name="brand" />
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">URL Immagine:</label>
+          <input
+            type="url"
+            class="form-control"
+            id="imageUrl"
+            name="imageUrl"
+          />
+        </div>
+        <button type="button" class="btn btn-success" onclick="createProduct()">
+          Crea Prodotto
+        </button>
+        <button type="button" class="btn btn-warning" onclick="updateProduct()">
+          Modifica Prodotto
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">
+          Reset
+        </button>
+      </form>
+      <div id="existing-products" class="row"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="backoffice.js"></script>
+  </body>
+</html>
